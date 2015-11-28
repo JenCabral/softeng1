@@ -1,0 +1,126 @@
+
+C:\Users\Jen\workspace\ORGANIZR>set CLASSPATH=.;bin\classes;lib\junit.jar;lib\android.jar 
+
+C:\Users\Jen\workspace\ORGANIZR>REM To get console-mode results from unit test execution, use the following instead: 
+
+C:\Users\Jen\workspace\ORGANIZR>REM java junit.textui.TestRunner comp3350.tests.AllTests 
+
+C:\Users\Jen\workspace\ORGANIZR>java junit.swingui.TestRunner comp3350.tests.AllTests 
+
+Starting ItemTest#testItemEquals
+Finished ItemTest#testItemEquals
+
+Starting ItemTest#testItemNameDescription
+Finished ItemTest#testItemNameDescription
+
+Starting ItemTest#testItemNotEquals
+Finished ItemTest#testItemNotEquals
+
+Starting ItemTest#testItemNoNameNoDescription
+Finished ItemTest#testItemNoNameNoDescription
+
+Starting CollectionTest#testCollectionNameDescription
+
+Finished CollectionTest#testCollectionNameDescription
+
+Starting CollectionTest#testCollectionEquals
+Finished CollectionTest#testCollectionEquals
+
+Starting CollectionTest#testCollectionNotEquals
+Finished CollectionTest#testCollectionNotEquals
+
+Starting CollectionTest#testCollectionNoNameNoDescription
+
+Finished CollectionTest#testCollectionNoNameNoDescription
+
+Starting ItemCollectionTest#testItemCollectionNotEquals
+Finished ItemCollectionTest#testItemCollectionNotEquals
+
+Starting ItemCollectionTest#testItemCollection
+Finished ItemCollectionTest#testItemCollection
+
+Starting ItemCollectionTest#testItemCollectionEquals
+Finished ItemCollectionTest#testItemCollectionEquals
+
+Starting ItemCountTest#testNullObject
+Finished ItemCountTest#testNullObject
+
+Starting ItemCountTest#testMissingItemIds
+Finished ItemCountTest#testMissingItemIds
+
+Starting ItemCountTest#testMissingCollectionIds
+Finished ItemCountTest#testMissingCollectionIds
+
+Starting ItemCountTest#testMultipleItems
+Finished ItemCountTest#testMultipleItems
+
+Starting ItemCountTest#testSomeMissingCollectionIds
+Finished ItemCountTest#testSomeMissingCollectionIds
+
+Starting ItemCountTest#testSomeMissingItemIds
+Finished ItemCountTest#testSomeMissingItemIds
+
+Starting ItemCountTest#testNullList
+Finished ItemCountTest#testNullList
+
+Starting ItemCountTest#testEmptyList
+Finished ItemCountTest#testEmptyList
+
+Starting ItemCountTest#testOneItem
+Finished testItemCount: one item
+
+Starting ItemCountTest#testMissingItemAndCollectionIds
+Finished ItemCountTest#testMissingItemAndCollectionIds
+
+Starting ItemCountTest#testSomeMissingItemAndCollectionIds
+Finished ItemCountTest#testSomeMissingItemAndCollectionIds
+Opened stub database database/SC
+Closed stub database SC
+Opened stub database database/SC
+Closed stub database SC
+Opened stub database database/SC
+Closed stub database SC
+Opened stub database database/SC
+Closed stub database SC
+Opened stub database database/SC
+Closed stub database SC
+Opened stub database database/SC
+Closed stub database SC
+Opened stub database database/SC
+Closed stub database SC
+Opened stub database database/SC
+Closed stub database SC
+Opened stub database database/SC
+Closed stub database SC
+Opened stub database database/SC
+Closed stub database SC
+Opened stub database database/SC
+
+Starting DataAccessTest#testGetItemSequentialTypical
+
+Finished DataAccessTest#testGetItemSequentialTypical
+Closed stub database SC
+Opened stub database database/SC
+
+Starting DataAccessTest#testGetItemElementsTypical
+
+Finished DataAccessTest#testGetItemElementsTypical
+Closed stub database SC
+Opened stub database database/SC
+
+Starting DataAccessTest#testGetCollectionSequentialTypical
+
+Finished DataAccessTest#testGetCollectionSequentialTypical
+Closed stub database SC
+
+Starting NextIDTest#testEmptyItem: Get next ID for a null Item list
+Finished NextIDTest#testEmptyItem: Get next ID for a null Item list
+
+Starting NextIDTest#testEmptyCollection: Get next ID for a null Collection list
+Finished NextIDTest#testEmptyCollection: Get next ID for a null Collection list
+
+Starting NextIDTest#testAfterDeleteItem: Get next ID after Item deleted
+Finished NextIDTest#testAfterDeleteItem: Get next ID after Item deleted
+
+Starting NextIDTest#testEmptyCollection: Get next ID for a 2 Item list
+Finished NextIDTest#testEmptyCollection: Get next ID for a 2 Item list

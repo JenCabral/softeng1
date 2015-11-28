@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/itemYear"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editItemYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/collections_description"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editItemDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.13"
+        android:columnCount="1" >
+
+        <Button
+            android:id="@+id/save_item"
+            android:layout_column="0"
+            android:layout_gravity="right|bottom"
+            android:layout_row="0"
+            android:onClick="saveItem"
+            android:text="@string/save_collection" />
+
+        <Button
+            android:id="@+id/delete_item"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_row="0"
+            android:onClick="deleteItem"
+            android:text="@string/delete" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_column="0"
+            android:layout_gravity="left|bottom"
+            android:layout_row="0"
+            android:text="@string/cancel"
+            android:onClick="cancelItemEdit" />
+
+    </GridLayout>
+
+</LinearLayout>

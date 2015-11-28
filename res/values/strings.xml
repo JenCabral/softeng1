@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Global -->
+    <string name="app_name">Organizr</string>
+    <string name="title_activity_home">Organizr</string>
+    <string name="title_activity_edit_collection">Edit collection</string>
+    <string name="title_activity_edit_item">Edit item</string>
+    <string name="title_activity_view_items">Items</string>
+    <string name="registrations">Registrations</string>
+    <string name="fatalError">Fatal error</string>
+    <string name="warning">Warning</string>
+    
+    <!-- ViewItemsActivity -->
+    <string name="add_item">Add item</string>
+
+    <!-- HomeActivity -->
+    <string name="create_collection">Create collection</string>
+    <string name="save_changes">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="name">Name</string>
+    <string name="collections_description">Description</string>
+    <string name="save_collection">OK</string>
+    <string name="search">Search</string>
+    <string name="sort">Sort</string>
+    <string name="sort_asc">Ascending</string>
+	<string name="sort_desc">Descending</string>
+		<string name="itemYear">Year</string>
+	<string name="sort_year">By Year</string>
+	<string name="sort_name">By Name</string>
+
+</resources>

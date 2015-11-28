@@ -1,0 +1,403 @@
+May 25th - Group Meeting 9:00am
+	- Discussed stub database implementation.
+	- Identified core user stories and divided them into developer tasks.
+		- Create Collections: Identified create, delete, update as core functions to implement.
+		- Identified Name, Description and ID as core data for Collections.
+		- Discussed layout and interactions of Collection view GUI.
+		- Divided developer tasks among group members.
+		
+		- Create Items: Identified create, delete, update as core functions.
+		- Identified Name, Description and ID as core data.
+		- Discussed creating items inside or outside of collections.
+		- Divided developer tasks among group members.
+		
+		- Discussed logic required between database and objects.
+		
+	Developers Tasks and Assignments:
+	CREATE COLLECTIONS
+		- Create Objects: Collection
+			- Joel - 2 hours
+			RESULT: took 7.5 hours total (collections and items) with learning, testing and other changes
+		- Create Dummy Data (persistence)
+			- Collection Data to be stored: 
+				- name, id(hidden from user), descriptor
+			- Jen - 2 hours
+			RESULT: took 5 hours total (collections and items)
+		- Create Business Functions:
+			- create, update, delete, get
+			- Brent - 2 hours
+			RESULT: took 2.5 hours total (collections and items)
+		- GUI Creation for Collections
+			- create/update
+			- main view (when app launches)
+			- James and Max - 8 hours (split between 2 = 4 hours each)
+			RESULT: 18 hours total (collections and items)
+	ADD/REMOVE ITEM
+		- Create Objects: Item
+			- Relational class too (eg collectionsItems)
+			- Joel - 2 hours
+			RESULT (SEE ABOVE)
+		- Create Dummy Data (persistence)
+			- Item data to be stored: 
+				- ID, name, description
+			- collectionItems data to be stored:
+				- collectionID, itemID
+			- Jen - 3.5 hours
+			RESULT (SEE ABOVE)
+		- Create business
+			- Item: create update delete
+			- relational: 
+				- logic: count number of items in a collection
+			- Brent - 2.5 hours
+			RESULT (SEE ABOVE)
+		- Create GUI for Items
+			- create/update
+			- list view
+			- Max and James - 12 hours (divided between 2 = 6 hours each)
+			RESULT (SEE ABOVE)
+		
+	- Planned to meet Thursday, May 28 approx. 2pm
+
+May 26 - Updated persistence layer to reflect our project (Jen, 1 hr)	
+	
+May 26 - Domain Specific Objects (Joel, 1 hr)
+	- Generated the Item, Collection, and ItemCollection classes
+	- updated ItemTest, CollectionTest, and ItemCollectionTest, 
+		to use appropriate names and descriptions
+	- learned some more Eclipse manipulated CVS
+	
+May 28 - Group Meeting 2:00pm
+	- worked on project as a group
+	- discussed implementation
+		
+May 28 - Fixed an oversight (Joel, 0.05 hrs)
+	- in Collection class, Courses-->Collection
+	
+May 28 GUI creation for collections (James, 1 hr)
+    - Got test GUI going
+    - In HomeActivity, generated some data and stuck it in a ListView
+	
+May 31 - (Max, approx. 1.5hrs)
+	   - Did some refactoring in the persistence layer.
+	   - Started working on the UI for Collections under 'activity_collections.xml'.
+	   - Made a copy of 'activity_home' to use as the item view screen ('activity_collection_view.xml')
+
+May 31 - Refactored the business layer (Brent, 0.5 hrs)
+	- Refactored AccessCollections, AccessItems and AccessItemCollection
+	- Changed the names of the classes and methods for calculate and gpa to Count and countItems
+	- Next I will start working on properly implementing the countItems method and testing it
+
+May 31 - Started testing itemCount method (Brent, 0.5 hrs)
+	- Finished adding Collection description (Joel, 0.1 hrs)
+	- Finished the "Dummy Data" in the Persistence layer (Jen, 0.5 hrs)
+	
+June 2 (Max, 1hr.)
+	- Finished refactoring in the presentation layer
+	- Added a temporary second constructor to the Collection class that takes a name and description and 
+	  generates an ID that is unique based on a static int variable.
+	  
+June 2 (Jen, 1hr.)
+	- refactored names of layers
+	- ran the program in the adroid emulator
+	- updated log to include developer tasks
+	
+June 2 (Max, 30mins)
+	- Changed titles from SRSYS to Organizer in presentation.
+	
+June 2 (Joel, 0.6 hrs)
+	- fixed Collection creation in CollectionTest
+	- converted IDs of domain specific objects from Strings to longs
+	- refactored tests
+	
+June 2 (Brent, 1.5 hrs)
+	- Worked on the tests for itemCount
+	- Switched some of the business variables to long to match Joel's changes
+	- Because null is not availble for long, used -1 to indicate no value
+	
+June 2 GUI creation for collections (James, 1.5hrs)
+    - description is now displayed
+    - create collection now does not display if there is already a collection.
+    
+June 3 GUI creation for collections (James, 1hr)
+    - Fixed bugs from change of id from long to String in DataAccessStub
+    - Added padding to collection display in HomeActivity
+    - Launch EditCollectionActivity from HomeActivity when collection is touched (Just a stub for now).
+    - Motion to delete unmaintained classes from presentation
+    
+June 3 Tests, and intial Readme (Joel, 0.5 hrs)
+	- Created tests for creating domain specific objects with null names and descriptions
+	- Create initial Readme.txt
+	
+June 3 Tests for Persistence (Jen, 2 hrs)
+ 	- Learned about jUnit tests
+ 	- created jUnit tests for find next id function
+
+June 3 More tests for domain specific objects (Joel, 1 hr)
+	- Created tests to show that comparing domain specific objects by ID, 
+		not by contents, is intentional (like SRSYS).
+    - updated Readme.txt
+    - updated test output to match standards
+    
+June 3 Create GUI for items (James, 6.5 hrs)
+    - Refactored GUI for collections in accordance with stuff learned doing the items GUI
+    - Made Collection and Item parcelable
+    - Removed getSequential from AccessCollections
+    - Finished GUI for iteration 1.
+        
+June 3 Edit Collection interface (Max, 3.5hrs)
+	- Added interface for editing/adding collections.
+	- Added interface for editing/adding items.
+	- Created a test icon for our app.
+	- Finished GUI for iteration 1.
+    
+June 3 Fix running unit tests for JUnit (Joel, ~3 hrs)
+	- Added lib/android.jar to SetClasspath.bat
+	- Noticed to set android.jar to load after JUnit.jar when running JUnit tests from Eclipse
+	
+June 3 Attempted Parcel testing (Joel, 1.5 hrs)
+	- Added android.jar to the .classpath file
+	- Added comment explaining why there is no Parcel testing at this time
+	  It could be possible in the future if we want it: Roboelectric is pretty cool.
+	  
+June 4 (Max, 1.5hrs)
+	- Added description of project packages and architecture to the project readme file.
+	- Assisted with getting project to compile with Compile.bat.
+	
+June 4 (Joel, 0.1 hrs)
+	- Polished the README's grammar
+	
+June 4 (Jen, 2 hrs)
+	- Fixed tests for NextID (to work with new presentation files - Android.jar)
+	- Got Compile.bat working on the command prompt
+	- Created architecture sketch
+	- Got project read for submission
+
+June 4 (Joel, 0.1 hrs)
+	- Modified a test's output
+_______________________________________________________________________________
+**ITERATION 2**
+_______________________________________________________________________________	
+June 15 Group Meeting:
+	- Discussed tasks for iteration 2
+
+June 16 
+- Broke user stories into detailed stories:
+	- Searching:
+		- Find an item in a collection by searching for it by name (1 day)
+
+	- Sorting:
+		- Order the items in a collection alphabetically or by number. (1 day)
+		
+	- Multiple Collections:
+		- Add more than one collection. (2 day)
+		- View all collections. :)
+		
+- Broke detailed stories into developer tasks:
+	- Find an item in a collection by searching for it by name
+		- Add a menu (8hrs)
+		- Add a search bar and display results (3hrs)
+		- Add appropriate functions to Business. (3hrs)
+		
+	- Order the items in a collection alphabetically or by number.
+		- Add 'sort by' buttons/dropdown menu (3hrs)
+		- Add appropriate functions to Business. (3hrs)
+		
+	- Add more than one collection.
+		- Update to full sized database. (1 day)
+		- Stop hiding create collection button. (30 mins)
+		- Change how the item view is populated (currently pulls all items). (1 day)
+		
+	- View all collections.
+		- Automatically taken care of.
+	
+June 16 (Joel, 3.5 hours)
+	- Organizr now can attempt to use the full database when run, if it
+	  is enabled in the Services class
+	- There's at least one bug remaining: the Android app
+	  fails to use or see data from the database 
+	  (though it is now connecting correctly, etc)
+	
+June 19 (Max, 4 hours)
+	- Implemented searching and sorting for collections and tests
+	- Helped resolve a bug with the cancel button on the create collection menu
+	- Planned out search and sort for items. We will need to implement a way to get the items for a specific collection)
+	
+June 19 (Jen, 4 hours)
+ 	- Resolved a bug with the cancel button on the create collection menu
+ 	- Added menu to ActionBar (not functional yet - waiting on search and sort functions)	
+ 	- Planned out search and sort for items. We will need to implement a way to get the items for a specific collection)
+ 	
+ June 19 (Brent, 2 hours)
+	- Went through the persistence layer looking for any issues with naming
+	- Cleaned up the getItemElements and getCollectionElements methods within persistence layer
+ 	
+June 19 (James, 2 hours)
+    - Refactored to remove parcelable
+    - Added business and persistance functions getItemById and getCollectionByID
+    - Did not write tests for them (ran out of time)
+    - App uses stub still instead of full database (don't know why), but is still as functional as it was before the refactor 
+    - Max and James are not typos in Eclipse, but Jen, Joel, and Brent are. One more reason to switch to Android Studio.
+
+ June 20 (Jen, 4 hours)
+ 	- Made search and sort buttons/menu work for Collections
+ 	- Fixed functionality of multiple collections. Only display items for a specific collection when it is clicked
+ 	- Added sort menu and search buttons for items
+    
+June 20 (Max, 4 hours)
+	- Adding functionality for searching and sorting of items within collections.
+	- Created 'getCollectionItems' - a function for getting all the items associated with a collection.
+	- Implemented the above function for the real and stub databases.
+	- Fixed a bug in the stub database implementation: item/collection ids were being inserted backwards.
+	- Helped Fix functionality of multiple collections. Only display items for a specific collection when it is clicked
+	- Helped with adding sort menu and search buttons for items
+
+June 20 (Joel, 3 hours)
+		- Got database copying onto device
+		- Fixed incorrect SQL queries 
+		- Fixed oversights in DataAccessObject
+		- More refactoring
+		- Fixed broken test
+		
+June 21 (Max, 4 hours)
+	- Worked on getting item creation working with the real database - Refactored insertItem functions to also create
+	  ItemCollection relations. Refactored deleteItem to delete corresponding ItemCollection relations when an item is
+	  deleted.
+	- Fixed bugs with creating/updating items. Wasn't able to resolve the bug in deleting collections but it's being caused by a null
+	  pointer exception because it's trying to return to the collection view for a collection that no longer exists. This could probably
+	  be resolved by returning to the home view after deleting a collection.
+	- Fixed a future issue with deleting collections also deleting all items in the database instead of just the items associated with that
+	  collection.
+	- SQL statements either aren't working or are being used incorrectly, aside from deleting collections, all other functionality works
+	  fine with the stub database, so the problem exists somewhere in the persistence layer.
+	- Updated the insert item tests to use the function's new format.
+
+June 21 (Brent, 4 hours)
+	- Worked on the insertItem but Max ended up beating me to the punch
+	- Refactored some code
+	- Changed the initial database values (in sc.script) to be the same as the values in our stub database
+	
+June 21 (Joel, 0.1 hours)
+		- Fixed broken test
+		- Fixed variable names in said test & got rid of a warning
+		- Fixed more broken tests
+		
+June 21 (Jen, 2 hours)
+	- Fixed error when deleting a collection with the stub db
+	- learned about using debugging in eclipse. 
+	- sourced error when deleting and updating items with hsql. Has to do with a constraint. Tried adding on delete cascades for the 2 primary 
+	  keys in the itemcollections table but does not appear to fix the problem
+	  
+June 21 (James, 15 minutes)
+    - Made buttons move when the keyboard opens in EditCollectionActivity and EditItemActivity
+  
+June 21 (James, 1 hour)
+    - Fixed bugs when adding items and collections with persistent database
+    
+June 21 (Max, 30 minutes)
+	- Fixed an issued with getNextID in the stub database which was not necessarily returning the next available ID.
+	
+June 22 (Max, 30 minutes)
+	- Did some last minute testing and removed commented code to launch with stub database for testing.
+
+June 22 (James, 1.5 hours)
+    - Added tests for the getXByID functions and did lots of refactoring
+    
+June 22 (Joel, 1 hour)
+	- Changed DataAccessTest to have individual tests, in individual methods, outputting formatted messages
+	- Suppressed a warning
+	
+June 23 (Max, 1 hour)
+	- Prepared readme.txt for iteration 2
+	- Helped to get Compile.bat and RunUnitTests.bat to function correctly.
+
+June 23 (Jen, 1 hour)
+	- Prepared printout of developer tasks, user stories and detailed stories
+	- Fixed Compile.bat
+	- Refactored code.
+	
+June 23 (Jen, 20 mins)
+	- prevent app from saving item or collection with no name.
+_______________________________________________________________________________
+**ITERATION 3**
+_______________________________________________________________________________	
+July 2 Group Meeting 2pm:
+	- Discussed goals for iteration
+	- Planned for adding acceptance testing and integration testing.
+	- Discussed additional features to add during this iteration.
+	
+July 3 (Max, 2 hours)
+	- Added 'year' to Item object. Updated all layers and tests to support the extra field.
+
+July 3 (Jen, 2.5 hours)
+    - added sort by year
+    - added sort ascending and descending for both year and name
+    - helped Max
+    
+July 3 (Joel, 2 hours)
+	- Researched and decided on the best way to run integration tests with the stub database too (I ended up on a simple variant of what's in SRSYS)
+	- Implemented integration versions of DataAccessTest's tests, fixing an oversight in the stub database
+	- Refactored how tests are run, so that subsets can be run easily
+	
+July 3 (James, 30 minutes)
+    - Got acceptance tests working and wrote one to test creating collections.
+    
+July 3 (Brent, 3.5 hours)
+	- Spent some time getting the app to run on my S4
+	- Reviewed the SRSYS and James' acceptance tests
+	- Wrote 3 acceptance tests for editing a collection, editing an item and add/remove an item
+	
+July 4 (Brent, 0.5 hours)
+	- Edited the add/remove item acceptance test
+	
+July 4 (Joel, 5 hours)
+	- Implemented the integration tests for AccessItems, debugging and modifying the DataAccess objects
+	
+July 5 (James, 30 minutes)
+    - Acceptance test for sorting collections
+    
+July 5 (James, 1 hour)
+    - Acceptance tests for searching and sorting.
+    - I decided to continue to implement each test in its own file, in order to make it simple to run a single test while writing them.
+    - Seems like they all work currently, which is good.
+    - It currently takes 2 minutes and 20 seconds to run all tests, for those curious.
+    
+July 5 (James, 20 minutes)
+    - Checked all of our java files for misplaced braces and fixed them
+    - Also removed the menus from EditCollectionsActivity and EditItemsActivity, since there's nothing to sort in there
+    
+July 6 (Max, 30 minutes)
+	- NEW ICON!!!!!
+	
+July 6 (Joel, 1.5 hours)
+	- Created AccessCollections integration tests, harmonizing the stub database
+	- Some formatting changes to the integration tests
+	
+July 7 (Max, 2 hours)
+	- Added more comprehensive unit tests for features that were added this iteration.
+	- Prepared submission requirements.
+	- Updated the readme for iteration 3.
+	- Resolved warnings.
+	- Fixed sorting by year, ascending and descending were backwards.
+	
+July 7 (Jen, 2 hours)
+	- Added RunItegrationTests.bat file
+	- Debugged RunItegrationTests.bat 
+	
+July 7th Group Meeting
+	- Discussed iteration 2 marks
+	- discussed retrospective
+	- assigned tasks for presentation.
+	- decided to meet Wednesday July 8th at 12:00
+	- aiming to present on Thursday, July 9th
+	
+July 7 (Joel, 2.5 hours)
+	- Set Items and Collections to rename themselves to "Unnamed" if passed a blank or null string, updated tests
+		(It seems incorrect for the objects to allow themselves to be null
+		 if the presentation layer already prohibits making them unnamed)
+	- Added object unit tests
+	- Added business-persistence integration tests
+	- Deleted AccessItemCollection, formatting, etc
+	- Fixed a failing acceptance test
+	
+July 8 (Joel, 1 hour)
+	- Added persistence unit and integration tests for updating, deleting
